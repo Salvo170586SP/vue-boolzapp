@@ -1,16 +1,18 @@
-[class^="col"] {
+ [class^="col"] {
      border: 1px solid red;
-}
-
+} 
+ 
 body {
      background-color: #D9DBD5;
 }
 
-
-
 /* utility */
 .header-contact {
      height: 50px;
+}
+
+time{
+    color: cadetblue;
 }
 
 i {
@@ -25,7 +27,6 @@ i {
 figure {
      width: 40px;
      height: 40px;
-
      border-radius: 50%;
      overflow: hidden;
 }
@@ -34,21 +35,21 @@ img {
      width: 100%;
 }
 
-.bg-body-chat {
-     background-image: url('../img/mine.jpg');
-     background-position: center;
-}
-
 .h-400{
     height: 456px;
     overflow: auto;
 }
 
 .h-500{
-    height: 500px;
+    height: 515px;
     overflow: auto;
 }
 
+/* background chat */
+.bg-body-chat {
+     background-image: url('../img/mine.jpg');
+     background-position: center;
+}
 
 /* color */
 .bg-whitelight {
@@ -61,4 +62,14 @@ img {
 
 .bg-white-pink {
      background-color: #E9EBEB;
+}
+
+
+
+.sent{
+  background-color: #D5F9BA;   
+}
+
+.received{
+  background-color: white;   
 }
