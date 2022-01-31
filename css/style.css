@@ -18,6 +18,9 @@ i {
      cursor: pointer;
 }
 
+.b-radius-10{
+    border-radius: 10px;
+}
 
 figure {
      width: 40px;
@@ -36,6 +39,15 @@ img {
      background-position: center;
 }
 
+.h-400{
+    height: 456px;
+    overflow: auto;
+}
+
+.h-500{
+    height: 500px;
+    overflow: auto;
+}
 
 
 /* color */
