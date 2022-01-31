@@ -1,9 +1,10 @@
 /*  [class^="col"] {
      border: 1px solid red;
-} 
-  */
+} */
 body {
-     background-color: #D9DBD5;
+    height: 100vh;
+     background: linear-gradient(to bottom, #009688 20%, #D7DBD7 20%); /* W3C */
+
 }
 
 /* utility */
