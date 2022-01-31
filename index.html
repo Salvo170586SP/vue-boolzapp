@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzaap</title>
 </head>
@@ -81,12 +81,13 @@
 
                             <!-- contatti -->
                             <div class="row bg-light">
-                                <div class="box-rubrica h-400">
+                                <div class="box-rubrica py-3 h-400">
                                     <div class="col-12">
                                         <div class="row ">
                                             <div class="col-12">
                                                 <div v-for="contact  in contacts" class="row">
-                                                    <div class="col-3 py-1  d-flex justify-content-center align-items-center">
+                                                    <div
+                                                        class="col-3 py-1  d-flex justify-content-center align-items-center">
                                                         <figure>
                                                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                                         </figure>
@@ -135,63 +136,53 @@
 
                             </div>
                             <!-- corpo chat -->
-                            <div class="row bg-body-chat">
+                            <div class="row bg-body-chat body-chat ">
                                 <div class="col-12">
-                                    <div class="body-chat h-500">
-                                        <div class="container">
+                                    <div class="container h-500">
+                                        <div id="message-received">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <div id="message-received">
-                                                        <div class="row">
-                                                            <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-6 offset-6">
+                                                            <div class="box-message sent  b-radius-10 my-2 p-2">
                                                                 <div class="row">
-                                                                    <div class="col-6 offset-6">
-                                                                        <div
-                                                                            class="box-message sent  b-radius-10 my-2 p-2">
-                                                                            <div class="row">
-                                                                                <div class="col-12">
-                                                                                    <p>Hai portato a spasso il cane?</p>
-                                                                                </div>
-                                                                                <div class="col-12 text-end">
-                                                                                    <time datetime="2020-01-10 15:30"
-                                                                                        class="fs-6 ">10/01/2020
-                                                                                        15:30:55</time>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                    <div class="col-12">
+                                                                        <p>Hai portato a spasso il cane?</p>
+                                                                    </div>
+                                                                    <div class="col-12 text-end">
+                                                                        <time datetime="2020-01-10 15:30"
+                                                                            class="fs-6 ">10/01/2020
+                                                                            15:30:55</time>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-6 offset-6">
-                                                                        <div
-                                                                            class="box-message sent b-radius-10 my-2 p-2">
-                                                                            <div class="col-12">
-                                                                                <p>Ricordati di dargli da mangiare</p>
-                                                                            </div>
-                                                                            <div class="col-12 text-end">
-                                                                                <time datetime="2020-01-10 15:50"
-                                                                                    class="fs-6 ">10/01/2020
-                                                                                    15:50:55</time>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 offset-6">
+                                                            <div class="box-message sent b-radius-10 my-2 p-2">
+                                                                <div class="col-12">
+                                                                    <p>Ricordati di dargli da mangiare</p>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="col-6">
-                                                                        <div
-                                                                            class="box-message received b-radius-10 my-2 p-2">
-                                                                            <div class="col-12">
-                                                                                <p>Fatto tutto!</p>
-                                                                            </div>
-                                                                            <div class="col-12 text-end">
-                                                                                <time datetime="2020-01-10 16:15"
-                                                                                    class="fs-6 ">10/01/2020
-                                                                                    16:15:55</time>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="col-12 text-end">
+                                                                    <time datetime="2020-01-10 15:50"
+                                                                        class="fs-6 ">10/01/2020
+                                                                        15:50:55</time>
                                                                 </div>
-
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="box-message received b-radius-10 my-2 p-2">
+                                                                <div class="col-12">
+                                                                    <p>Fatto tutto!</p>
+                                                                </div>
+                                                                <div class="col-12 text-end">
+                                                                    <time datetime="2020-01-10 16:15"
+                                                                        class="fs-6 ">10/01/2020
+                                                                        16:15:55</time>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -199,26 +190,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>             
+                            </div>
+                            
+                            
+                            <!-- area digitazione -->
 
-                                <!-- area digitazione -->
-                                <div class="row">
-                                    <div class="col-12  ">
-                                        <div class="row bg-whitelight ">
-                                            <div class="col-1 d-flex align-items-center justify-content-center">
-                                                <i class="far fa-smile mt-2"></i>
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="mx-5">
-                                                    <input type="text" size="60" class="b-radius-10 border-0 my-2 p-2"
-                                                        placeholder="Scrivi un messaggio">
-                                                </div>
-                                            </div>
-                                            <div class="col-1 d-flex align-items-center justify-content-center ">
-                                                <i class="fas fa-microphone  mt-2 "></i>
-                                            </div>
-                                        </div>
+                            <div class="row bg-whitelight ">
+                                <div class="col-1 d-flex align-items-center justify-content-center">
+                                    <i class="far fa-smile mt-2"></i>
+                                </div>
+                                <div class="col-10">
+                                    <div class="mx-5">
+                                        <input type="text" size="60" class="b-radius-10 border-0 my-2 p-2"
+                                            placeholder="Scrivi un messaggio">
                                     </div>
+                                </div>
+                                <div class="col-1 d-flex align-items-center justify-content-center ">
+                                    <i class="fas fa-microphone  mt-2 "></i>
                                 </div>
                             </div>
                         </div>
