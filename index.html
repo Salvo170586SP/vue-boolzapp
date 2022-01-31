@@ -85,18 +85,19 @@
                                     <div class="col-12">
                                         <div class="row ">
                                             <div class="col-12">
-                                                <div class="row bg-white-pink">
-                                                    <div
-                                                        class="col-3  d-flex justify-content-center align-items-center">
+
+                                                <div v-for="contact in contacts" class="row">
+                                                    <div class="col-3 py-1  d-flex justify-content-center align-items-center">
                                                         <figure>
                                                             <img src="img/avatar_1.jpg" alt="">
                                                         </figure>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h5>Michele</h5>
+                                                        <h5>{{contact.name}}</h5>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+
+                                               <!--  <div class="row">
                                                     <div class="col-3 d-flex justify-content-center align-items-center">
                                                         <figure>
                                                             <img src="img/avatar_2.jpg" alt="">
@@ -126,66 +127,9 @@
                                                         <h5>Luisa</h5>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 d-flex justify-content-center align-items-center">
-                                                        <figure>
-                                                            <img src="img/avatar_4.jpg" alt="">
-                                                        </figure>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <h5>Luisa</h5>
-                                                    </div>
-                                                </div>
+                                                  -->
+                                                
+                                              
 
 
                                             </div>
