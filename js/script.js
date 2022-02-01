@@ -18,7 +18,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
     el: '#app',
     data: {
-        newText: "",
+        newText: '',
         now: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         currentIndex: 0,
 
@@ -119,12 +119,12 @@ const app = new Vue({
         //*AGGIUNGO UN MESSAGGIO
         addMessage() {
             if(this.newText !== ''){
-                const newText = {
+                const newObject = {
                     date: this.now,
                     text: this.newText,
                     status: 'sent',
                 };
-                this.contacts.messages.push(newText);
+                this.contacts[this.currentIndex].messages.push(newObject);
                 this.newText = "";
             }
         }
