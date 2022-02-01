@@ -2,8 +2,9 @@
      border: 1px solid red;
 } */
 body {
-    height: 100vh;
-     background: linear-gradient(to bottom, #009688 20%, #D7DBD7 20%); /* W3C */
+     height: 100vh;
+     background: linear-gradient(to bottom, #009688 20%, #D7DBD7 20%);
+     /* W3C */
 
 }
 
@@ -12,8 +13,8 @@ body {
      height: 50px;
 }
 
-time{
-    color: cadetblue;
+time {
+     color: cadetblue;
 }
 
 i {
@@ -21,8 +22,8 @@ i {
      cursor: pointer;
 }
 
-.b-radius-10{
-    border-radius: 10px;
+.b-radius-10 {
+     border-radius: 10px;
 }
 
 figure {
@@ -36,14 +37,14 @@ img {
      width: 100%;
 }
 
-.h-400{
-    height: 456px;
-    overflow: auto;
+.h-400 {
+     height: 456px;
+     overflow: auto;
 }
 
-.h-500{
-    height: 515px;
-    overflow: auto;
+.h-500 {
+     height: 515px;
+     overflow: auto;
 }
 
 /* background chat */
@@ -65,7 +66,7 @@ img {
      background-color: #E9EBEB;
 }
 
-#active:hover{
+#active:hover {
      background-color: #009688;
      color: white;
 }
@@ -73,10 +74,22 @@ img {
 
 
 /* status messaggi */
-
-.sent{
-  background-color: #D5F9BA; 
+.message-container {
+     display: flex;
 }
-.received{
-  background-color: white;   
+
+.message-container.sent {
+     justify-content: flex-end;
+}
+
+.message-container.received {
+     justify-content: flex-start;
+}
+
+.message-container.sent .message {
+     background-color: #D5F9BA;
+}
+
+.message-container.received .message {
+     background-color: white;
 }
