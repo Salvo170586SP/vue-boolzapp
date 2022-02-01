@@ -85,10 +85,13 @@
                                     <div class="col-12">
                                         <div class="row ">
                                             <div class="col-12">
-                                                <div v-for="(contact, index)  in contacts" role="button" class="row" id="active" @click="selectContact(index)">
-                                                    <div class="col-3 py-1  d-flex justify-content-center align-items-center">
+                                                <div v-for="(contact, index)  in contacts" role="button" class="row"
+                                                    id="active" @click="selectContact(index)">
+                                                    <div
+                                                        class="col-3 py-1  d-flex justify-content-center align-items-center">
                                                         <figure>
-                                                            <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+                                                            <img :src="`img/avatar${contact.avatar}.jpg`"
+                                                                :alt="contact.name">
                                                         </figure>
                                                     </div>
                                                     <div class="col-9">
@@ -109,7 +112,8 @@
 
                                     <!-- titolo chat -->
                                     <div class="row bg-whitelight">
-                                        <div class="col-10 py-2 d-flex align-items-center" v-for="(contact, index)  in contacts" v-if="currentIndex === index">
+                                        <div class="col-10 py-2 d-flex align-items-center"
+                                            v-for="(contact, index)  in contacts" v-if="currentIndex === index">
                                             <figure>
                                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.avatar">
                                             </figure>
@@ -129,61 +133,48 @@
                             <div class="row bg-body-chat body-chat ">
                                 <div class="col-12">
                                     <div class="container h-500">
-                                        <div id="message-received">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="row">
-                                                        <div class="col-6 offset-6">
-                                                            <div class="box-message sent  b-radius-10 my-2 p-2">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <p>Hai portato a spasso il cane?</p>
-                                                                    </div>
-                                                                    <div class="col-12 text-end">
-                                                                        <time datetime="2020-01-10 15:30"
-                                                                            class="fs-6 ">10/01/2020
-                                                                            15:30:55</time>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 offset-6">
-                                                            <div class="box-message sent b-radius-10 my-2 p-2">
+                                        <div class="row">
+                                            <div class="col-12">
+
+                                                <!-- messaggi inviati -->
+                                                <div class="row" v-for="(contact, index) in contacts" v-if="currentIndex === index">
+                                                    <div class="col-6 offset-6">
+                                                        <div class="box-message sent b-radius-10 my-2 p-2">
+                                                            <div class="row">
                                                                 <div class="col-12">
-                                                                    <p>Ricordati di dargli da mangiare</p>
+                                                                    <p>{{contact.messages[index].text}}</p>
                                                                 </div>
                                                                 <div class="col-12 text-end">
-                                                                    <time datetime="2020-01-10 15:50"
-                                                                        class="fs-6 ">10/01/2020
-                                                                        15:50:55</time>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="box-message received b-radius-10 my-2 p-2">
-                                                                <div class="col-12">
-                                                                    <p>Fatto tutto!</p>
-                                                                </div>
-                                                                <div class="col-12 text-end">
-                                                                    <time datetime="2020-01-10 16:15"
-                                                                        class="fs-6 ">10/01/2020
-                                                                        16:15:55</time>
+                                                                    <time datetime="2020-01-10 15:30"
+                                                                        class="fs-6 ">{{contact.messages[index].date}}</time>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <!-- messaggi ricevuti -->                                           
+                                               <!--  <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="box-message received b-radius-10 my-2 p-2">
+                                                            <div class="col-12">
+                                                                <p>Fatto tutto!</p>
+                                                            </div>
+                                                            <div class="col-12 text-end">
+                                                                <time datetime="2020-01-10 16:15"
+                                                                    class="fs-6 ">10/01/2020
+                                                                    16:15:55</time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  -->
                                             </div>
                                         </div>
                                     </div>
-                                </div>             
+                                </div>
                             </div>
-                            
-                            
+
+
                             <!-- area digitazione -->
 
                             <div class="row bg-whitelight ">
