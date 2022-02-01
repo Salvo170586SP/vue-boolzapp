@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/customParseFormat.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
         
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzaap</title>
@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="col-10">
                                     <div class="mx-5">
-                                        <input type="text" @keyup.enter="addMessage()" size="60" class="b-radius-10 border-0 my-2 p-2" placeholder="Scrivi un messaggio">
+                                        <input type="text" @keyup.enter="addMessage()" v-model="newText" size="60" class="b-radius-10 border-0 my-2 p-2" placeholder="Scrivi un messaggio">
                                     </div>
                                 </div>
                                 <div class="col-1 d-flex align-items-center justify-content-center ">
