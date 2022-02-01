@@ -109,9 +109,9 @@
 
                                     <!-- titolo chat -->
                                     <div class="row bg-whitelight">
-                                        <div class="col-2 d-flex align-items-center">
+                                        <div class="col-2 d-flex align-items-center" v-for="(contact, index)  in contacts" v-if="currentIndex === index">
                                             <figure>
-                                                <img src="img/avatar_1.jpg" alt="">
+                                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                             </figure>
                                         </div>
                                         <div class="col-8">
