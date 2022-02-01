@@ -65,6 +65,10 @@ img {
      background-color: #E9EBEB;
 }
 
+#active:hover{
+     background-color: #009688;
+     color: white;
+}
 
 
 
