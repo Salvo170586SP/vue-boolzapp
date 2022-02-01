@@ -109,16 +109,11 @@
 
                                     <!-- titolo chat -->
                                     <div class="row bg-whitelight">
-                                        <div class="col-2 d-flex align-items-center" v-for="(contact, index)  in contacts" v-if="currentIndex === index">
+                                        <div class="col-10 py-2 d-flex align-items-center" v-for="(contact, index)  in contacts" v-if="currentIndex === index">
                                             <figure>
                                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.avatar">
                                             </figure>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="row">
-                                                <div class="col-12 h4">Michele</div>
-                                                <div class="col-12"><p>Ultimo accesso oggi alle</p></div>
-                                            </div>
+                                            <div class="h4 mx-5">{{contact.name}}</div>
                                         </div>
                                         <div class="col-2 d-flex justify-content-between  align-items-center">
                                             <i class="fas fa-search"></i>
