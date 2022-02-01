@@ -136,16 +136,16 @@
                                         <div class="row">
                                             <div class="col-12">
 
-                                                <!-- messaggi inviati -->
-                                                <div class="row" v-for="(contact, index) in contacts"  v-if="currentIndex === index">
+                                                <!-- messaggi -->
+                                                <div class="row" v-for="(message, index) in contacts[currentIndex].messages" >
                                                     <div class="col-6 offset-6">
-                                                        <div class="box-message b-radius-10 my-2 p-2" :class="{sent: contact.messages[index].status}">
+                                                        <div class="box-message b-radius-10 my-2 p-2" :class="message.status">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <p>{{contact.messages[index].text}}</p>
+                                                                <div class="col-12" >
+                                                                    <p>{{message.text}}</p>
                                                                 </div>
                                                                 <div class="col-12 text-end">
-                                                                    <time datetime="2020-01-10 15:30" class="fs-6 ">{{contact.messages[index].date}}</time>
+                                                                    <time datetime="2020-01-10 15:30" class="fs-6">{{message.date}}</time>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -153,19 +153,7 @@
                                                 </div>
 
 
-                                                <!-- messaggi ricevuti -->                                           
-                                                <div class="row" v-for="(contact, index) in contacts"  v-if="currentIndex === index">
-                                                    <div class="col-6">
-                                                        <div class="box-message b-radius-10 my-2 p-2" :class="{received: contact.messages[index].status}">
-                                                            <div class="col-12">
-                                                                <p>{{contact.messages[index].text}}</p>
-                                                            </div>
-                                                            <div class="col-12 text-end">
-                                                                <time datetime="2020-01-10 16:15" class="fs-6 ">{{contact.messages[index].date}}</time>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>  
+                                                
                                             </div>
                                         </div>
                                     </div>
