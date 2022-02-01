@@ -20,6 +20,10 @@ i {
      cursor: pointer;
 }
 
+input:focus{
+     outline:none;
+}
+
 .b-radius-10 {
      border-radius: 10px;
 }
