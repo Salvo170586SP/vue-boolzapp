@@ -2,8 +2,6 @@ console.log('vue ok', Vue);
 
 /*
 Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” 
-il testo viene aggiunto al thread sopra, come messaggio verde
 Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
 l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 */
@@ -118,7 +116,7 @@ const app = new Vue({
 
         //*AGGIUNGO UN MESSAGGIO
         addMessage() {
-            if(this.newText !== ''){
+            if (this.newText !== '') {
                 const newObject = {
                     date: this.now,
                     text: this.newText,
@@ -127,7 +125,22 @@ const app = new Vue({
                 this.contacts[this.currentIndex].messages.push(newObject);
                 this.newText = "";
             }
-        }
-    }
+        },
+
+        //*FUNZIONE PER INSERIRE MESSAGGIO AUTOMATICO
+        messageAuto() {
+            const received = {
+                date: this.now,
+                text: 'ok',
+                status: 'received',
+            };
+            this.contacts[this.currentIndex].messages.push(received);
+        },
+
+        
+
+    },
+
+  
 
 })
