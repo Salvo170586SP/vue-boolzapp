@@ -85,7 +85,7 @@
                                     <div class="col-12">
                                         <div class="row ">
                                             <div class="col-12">
-                                                <div v-for="contact  in contacts" role="button" class="row" id="active">
+                                                <div v-for="(contact, index)  in contacts" role="button" class="row" id="active" @click="selectContact(index)">
                                                     <div class="col-3 py-1  d-flex justify-content-center align-items-center">
                                                         <figure>
                                                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
@@ -111,17 +111,13 @@
                                     <div class="row bg-whitelight">
                                         <div class="col-2 d-flex align-items-center">
                                             <figure>
-                                                <img src="img/avatar_1.jpg" alt="avatar1">
+                                                <img src="img/avatar_1.jpg" alt="">
                                             </figure>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-8">
                                             <div class="row">
-                                                <div class="col-12">
-                                                    <h4>Michele</h4>
-                                                </div>
-                                                <div class="col-12">
-                                                    <p>Ultimo accesso oggi alle</p>
-                                                </div>
+                                                <div class="col-12 h4">Michele</div>
+                                                <div class="col-12"><p>Ultimo accesso oggi alle</p></div>
                                             </div>
                                         </div>
                                         <div class="col-2 d-flex justify-content-between  align-items-center">
