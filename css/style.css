@@ -45,6 +45,10 @@ img {
      overflow: auto;
 }
 
+.p-relative {
+     position: relative;
+}
+
 /* background chat */
 .bg-body-chat {
      background-image: url('../img/mine.jpg');
@@ -69,10 +73,10 @@ img {
      color: white;
 }
 
-.item-contact.active{
+.item-contact.active {
      background-color: #065048;
      color: white;
-} 
+}
 
 /* status messaggi */
 .message-container {
@@ -93,4 +97,14 @@ img {
 
 .message-container.received .message {
      background-color: white;
+}
+
+/* menu */
+.menu {
+     width: 150px;
+     height: 100px;
+     background-color: white;
+     padding: 10px;
+     position: absolute;
+
 }

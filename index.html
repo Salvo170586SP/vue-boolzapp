@@ -113,7 +113,7 @@
                         <div class="col-12">
                             <div class="container h-500">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-12 p-relative">
                                         <!-- messaggi -->
                                         <div class="message-container p-3"
                                             v-for="(message, index) in contacts[currentIndex].messages"
@@ -122,6 +122,10 @@
                                                 <p>{{message.text}}</p>
                                                 <time datetime="2022/02/01T18:40">{{message.date}}</time>
                                             </div>
+                                        </div>
+                                        <div class="menu">
+                                            <p>Info messaggio</p>
+                                            <p>Cancella</p>
                                         </div>
                                     </div>
                                 </div>
