@@ -145,8 +145,11 @@ const app = new Vue({
             }, 2000);
         },
 
- 
-       
+        filterWord() {
+            const wordSplit = this.contacts[this.currentIndex].name.split('');
+            console.log(wordSplit);
+
+        }
 
 
     },
