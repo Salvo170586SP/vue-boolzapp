@@ -76,7 +76,7 @@
                     <!-- contatti -->
                     <div class="row bg-light py-4">
                         <div class="col-12">        
-                            <div v-for="(contact, index) in contacts" role="button" class="row d-flex align-items-center" id="active" @click="selectContact(index)">
+                            <div v-for="(contact, index) in contacts" v-if="contact.visible === true" role="button" class="row d-flex align-items-center" id="active" @click="selectContact(index)">
                                 <div class="col-3 py-1  d-flex justify-content-center align-items-center">
                                     <figure>
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.avatar">

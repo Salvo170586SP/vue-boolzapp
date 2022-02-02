@@ -36,7 +36,7 @@ const app = new Vue({
             {
                 name: 'Michele',
                 avatar: '_1',
-                visible: true,
+                visible: false,
                 messages: [{
                     date: '10/01/2020 15:30:55',
                     text: 'Hai portato a spasso il cane?',
@@ -133,7 +133,7 @@ const app = new Vue({
                 this.contacts[this.currentIndex].messages.push(newObject);
                 this.newText = "";
             }
-            
+
             //*FUNZIONE PER INSERIRE MESSAGGIO AUTOMATICO
             setTimeout(() => {
                 const newObject = {
@@ -144,7 +144,10 @@ const app = new Vue({
                 this.contacts[this.currentIndex].messages.push(newObject);
             }, 2000);
         },
+
         
-        
+       
+
+
     },
 })
