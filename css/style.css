@@ -80,6 +80,7 @@ img {
 
 /* status messaggi */
 .message-container {
+     position: relative;
      display: flex;
 }
 
@@ -106,5 +107,7 @@ img {
      background-color: white;
      padding: 10px;
      position: absolute;
+     top: 96px;
+     z-index: 1;
 
 }
