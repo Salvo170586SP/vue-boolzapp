@@ -145,11 +145,28 @@ const app = new Vue({
             }, 2000);
         },
 
+        /* LOGICA ALTERNATIVA
         filterWord() {
             const wordSplit = this.contacts[this.currentIndex].name.split('');
-            console.log(wordSplit);
+            //console.log(wordSplit);      
+            const arrayWord = wordSplit.filter((character) => {
+                if(this.searchContact.includes(character)){
+                    this.contacts[this.currentIndex].visible = true;
+                }else{
+                    this.contacts[this.currentIndex].visible = false;
+                }            
+            });
+            return arrayWord 
+        },*/
 
-        }
+        //*FUNZIONE DI RICERCA 
+        isOk(contact){
+            if(this.searchContact === ''){//se la casella di input è vuota
+                return true; //rimane vero
+            }else{//altrimenti il nome del contatto è incluso nella casella di input
+                return contact.name.includes(this.searchContact); 
+            }
+        },  
 
 
     },
