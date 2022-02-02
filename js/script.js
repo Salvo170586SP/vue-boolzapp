@@ -160,13 +160,18 @@ const app = new Vue({
         },*/
 
         //*FUNZIONE DI RICERCA 
-        isOk(contact){
-            if(this.searchContact === ''){//se la casella di input è vuota
+        isOk(contact) {
+
+            if (this.searchContact === '') {//se la casella di input è vuota
                 return true; //rimane vero
-            }else{//altrimenti il nome del contatto è incluso nella casella di input
-                return contact.name.includes(this.searchContact); 
+            } else {  //altrimenti il nome del contatto è incluso nella casella di input
+                return contact.name.toLowerCase().includes(this.searchContact);
             }
-        },  
+
+
+        },
+
+        
 
 
     },
