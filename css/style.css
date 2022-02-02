@@ -109,4 +109,9 @@ img {
      top: 200px;
      right: 28px;
      z-index: 1;
+     display: none;
+}
+
+#active-menu:focus .menu {
+     display: block;
 }

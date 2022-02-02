@@ -75,8 +75,10 @@
 
                     <!-- contatti -->
                     <div class="row bg-light py-4">
-                        <div class="col-12">        
-                            <div v-for="(contact, index) in contacts" v-if="isOk(contact)" role="button" class="row d-flex align-items-center item-contact" :class="{active: currentIndex === index}"  @click="selectContact(index)">
+                        <div class="col-12">
+                            <div v-for="(contact, index) in contacts" v-if="isOk(contact)" role="button"
+                                class="row d-flex align-items-center item-contact"
+                                :class="{active: currentIndex === index}" @click="selectContact(index)">
                                 <div class="col-3 py-1  d-flex justify-content-center align-items-center">
                                     <figure>
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.avatar">
@@ -120,13 +122,15 @@
                                             :class="message.status">
                                             <div class="message p-2 rounded-3 shadow">
                                                 <p>{{message.text}}</p>
-                                                <time datetime="2022/02/01T18:40">{{message.date}}</time>
-                                                <i class="fas fa-chevron-down ms-5"></i>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <time datetime="2022/02/01T18:40"><small>{{message.date}}</small></time>
+                                                    <i class="fas fa-chevron-down ms-2" role="button" id="active-menu"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="menu shadow rounded-3">
-                                            <p>Info messaggio</p>
-                                            <p>Cancella messaggio</p>
+                                            <div class="menu shadow rounded-3">
+                                                <p>Info messaggio</p>
+                                                <p role="button">Cancella messaggio</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
