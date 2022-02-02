@@ -125,22 +125,16 @@ const app = new Vue({
                 this.contacts[this.currentIndex].messages.push(newObject);
                 this.newText = "";
             }
-        },
-
-        //*FUNZIONE PER INSERIRE MESSAGGIO AUTOMATICO
-        messageAuto() {
-            const received = {
-                date: this.now,
-                text: 'ok',
-                status: 'received',
-            };
-            this.contacts[this.currentIndex].messages.push(received);
-        },
-
-        
-
+            
+            //*FUNZIONE PER INSERIRE MESSAGGIO AUTOMATICO
+            setTimeout(() => {
+                const newObject = {
+                    date: this.now,
+                    text: 'ok',
+                    status: 'received',
+                };
+                this.contacts[this.currentIndex].messages.push(newObject);
+            }, 2000);
+        },      
     },
-
-  
-
 })
