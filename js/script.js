@@ -1,12 +1,19 @@
 console.log('vue ok', Vue);
 
-/*
-Milestone 3
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
-l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+/* 
+Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
+vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
+(es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
+
+Milestone 5 - opzionale
+Cancella messaggio: cliccando sul messaggio appare un menu a tendina 
+che permette di cancellare il messaggio selezionato (vedi immagine in allegato)
+Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
+NOTE:
+Ricordate di includere la proprietà visible nella nostra logica di ricerca
 */
-
-
 
 Vue.config.devtools = true;
 
@@ -16,6 +23,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
     el: '#app',
     data: {
+        searchContact: '',
         newText: '',
         now: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         currentIndex: 0,
@@ -135,6 +143,8 @@ const app = new Vue({
                 };
                 this.contacts[this.currentIndex].messages.push(newObject);
             }, 2000);
-        },      
+        },
+        
+        
     },
 })
