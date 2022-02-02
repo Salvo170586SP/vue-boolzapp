@@ -1,12 +1,6 @@
 console.log('vue ok', Vue);
 
 /* 
-Milestone 4
-Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
-vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
-(es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
-
-
 Milestone 5 - opzionale
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina 
 che permette di cancellare il messaggio selezionato (vedi immagine in allegato)
@@ -161,7 +155,6 @@ const app = new Vue({
 
         //*FUNZIONE DI RICERCA 
         isOk(contact) {
-
             if (this.searchContact === '') {//se la casella di input è vuota
                 return true; //rimane vero
             } else {  //altrimenti il nome del contatto è incluso nella casella di input

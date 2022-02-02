@@ -84,7 +84,7 @@
                                         <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.avatar">
                                     </figure>
                                 </div>
-                                <div class="col-9 h5"> {{contact.name}}</div>
+                                <div class="col-9 h5">{{contact.name}}</div>
                             </div>
                         </div>
                     </div>
@@ -117,20 +117,14 @@
                                 <div class="row">
                                     <div class="col-12 p-relative">
                                         <!-- messaggi -->
-                                        <div class="message-container p-3"
-                                            v-for="(message, index) in contacts[currentIndex].messages"
-                                            :class="message.status">
+                                        <div class="message-container p-3 p-relative" v-for="(message, index) in contacts[currentIndex].messages"                                           :class="message.status">
                                             <div class="message p-2 rounded-3 shadow">
                                                 <p>{{message.text}}</p>
                                                 <div class="d-flex justify-content-end align-items-center">
                                                     <time datetime="2022/02/01T18:40"><small>{{message.date}}</small></time>
-                                                    <i class="fas fa-chevron-down ms-2" role="button" id="active-menu"></i>
+                                                    <i class="fas fa-chevron-down ms-2" role="button"></i>
                                                 </div>
-                                            </div>
-                                            <div class="menu shadow rounded-3">
-                                                <p>Info messaggio</p>
-                                                <p role="button">Cancella messaggio</p>
-                                            </div>
+                                            </div>                                          
                                         </div>
                                     </div>
                                 </div>
