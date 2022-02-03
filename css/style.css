@@ -99,3 +99,19 @@ img {
      background-color: white;
 }
 
+/* menu a tendina */
+a #box-menu{
+     width: 200px;
+     height: 100px;
+     background-color: white;
+     padding: 10px;
+     position: absolute;
+     top: 30px;
+     right: 0;
+     z-index: 1;
+     display: none;
+}
+
+.menu:focus #box-menu{
+     display: block;
+}

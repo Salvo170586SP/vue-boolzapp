@@ -160,12 +160,12 @@ const app = new Vue({
             } else {  //altrimenti il nome del contatto è incluso nella casella di input
                 return contact.name.toLowerCase().includes(this.searchContact);
             }
-
-
         },
 
-        
-
+        clearMessage(index){
+            this.contacts[this.currentIndex].messages.splice(index, 1);
+        }
+       
 
     },
 })
