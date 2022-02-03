@@ -101,9 +101,10 @@ img {
 
 /* menu a tendina */
 a #box-menu{
-     width: 200px;
-     height: 100px;
+     width: 180px;
+     height: 90px;
      background-color: white;
+     color: black;
      padding: 10px;
      position: absolute;
      top: 30px;
