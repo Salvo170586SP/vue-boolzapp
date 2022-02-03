@@ -162,6 +162,7 @@ const app = new Vue({
             }
         },
 
+        //*FUNZIONE CANCELLA MESSAGGIO
         clearMessage(index){
             this.contacts[this.currentIndex].messages.splice(index, 1);
         }
